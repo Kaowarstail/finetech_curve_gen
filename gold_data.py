@@ -7,7 +7,6 @@ import datetime
 import os
 from dotenv import load_dotenv
 
-output_folder = '/home/kaowarstail/Documents/finetech/finetech_curve_gen/screenshot/'
 data_file = '/home/kaowarstail/Documents/finetech/finetech_curve_gen/Data OR.xlsx'  # Chemin vers le fichier de données
 
 # Charger les données depuis le fichier Excel
@@ -28,7 +27,7 @@ end_date = datetime.date(2023, 11, 3)
 max_duration = datetime.timedelta(days=90)
 
 # Generate random start dates within the range
-num_periods = 50  # Number of periods to generate
+num_periods = 100  # Number of periods to generate
 periods = []
 for _ in range(num_periods):
     duration = random.randint(60, max_duration.days)
@@ -51,6 +50,9 @@ for start, end in periods:
     start_datetime = datetime.datetime.strptime(start_date_str, "%Y-%m-%d")
     end_datetime = datetime.datetime.strptime(end_date_str, "%Y-%m-%d")
     df_selected = df.loc[end_datetime:start_datetime]
+    # Inverser l'ordre des données
+    df_selected = df_selected.iloc[::-1]
+
     
     # Check if df_selected is not empty
     if not df_selected.empty:
