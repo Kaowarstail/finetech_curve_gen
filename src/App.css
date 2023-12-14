@@ -11,9 +11,9 @@ header {
 }
 
 .logoHeader {
-    padding: 5px;
+    padding: 10px;
     width: auto;
-    height: 80%;
+    height: 60%;
 }
 
 .helloUser {
@@ -73,4 +73,59 @@ main {
     font-size: 11px;
     border-radius: 5px;
     font-weight: 700;
+}
+
+.blocActions {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    padding: 10px;
+    background-color: white;
+    border: solid 2px #0e172c;
+    width: 445px;
+    height: 350px;
+}
+
+.blocPrediction {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: white;
+    border: solid 2px #0e172c;
+    width: 900px;
+    height: 280px;
+}
+
+.prediction > h2 {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 480px;
+    left: 45px;
+    background-color: white;
+    font-size: 30px;
+}
+
+.btnExporterPrediction {
+    padding: 7px;
+    background-color: #0e172c;
+    color: white;
+    position: absolute;
+    top: 490px;
+    left: 765px;
+    width: 150px;
+    border: none;
+    font-size: 11px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.blocProfil {
+    position: absolute;
+    top: 464px;
+    right: 20px;
+    padding: 10px;
+    background-color: white;
+    border: solid 2px #0e172c;
+    width: 445px;
+    height: 280px;
 }

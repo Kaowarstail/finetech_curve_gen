@@ -16,15 +16,20 @@ export default function App() {
             <main>
                 <div className="blocFluxActuel">
                     <div className="fluxActuel">
-                        <h2>Flux actuel · </h2><h3>Gold</h3>
+                        <h2>Flux actuel ·</h2><h3>Gold</h3>
                     </div>
                     <div className="tradingViewWidget">
                         <TradingViewWidget/>
                     </div>
                     <button className="btnGenererPrediction">Générer une prédiction</button>
                 </div>
-                <div className="blocAllActions"></div>
-                <div className="blocPrediction"></div>
+                <div className="blocActions"></div>
+                <div className="blocPrediction">
+                    <div className="prediction">
+                        <h2>Prédiction</h2>
+                    </div>
+                    <button className="btnExporterPrediction">Exporter la prédiction</button>
+                </div>
                 <div className="blocProfil"></div>
             </main>
         </body>
