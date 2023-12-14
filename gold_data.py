@@ -27,7 +27,7 @@ end_date = datetime.date(2023, 11, 3)
 max_duration = datetime.timedelta(days=90)
 
 # Generate random start dates within the range
-num_periods = 100  # Number of periods to generate
+num_periods = 250  # Number of periods to generate
 periods = []
 for _ in range(num_periods):
     duration = random.randint(60, max_duration.days)
