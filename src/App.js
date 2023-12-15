@@ -29,8 +29,8 @@ export default function App() {
     }
 
     const tabActionsName= ["Gold", "Ethereum", "Apple", "Microsoft", "Tesla", "Bitcoin"];
-    const tabActionsPrice = ["1857.32€", "1857.32€", "1857.32€", "1857.32€", "1857.32€", "1857.32€"];
-    const tabActionsVariation = ["+170.25€ (0.45%)", "+170.25€ (0.45%)", "+170.25€ (0.45%)", "+170.25€ (0.45%)", "+170.25€ (0.45%)", "+170.25€ (0.45%)"];
+    const tabActionsPrice = ["1849.10€", "2046.77€", "182.12€", "336.40€", "230.79€", "38480.91€"];
+    const tabActionsVariation = ["-23.10€ (-1.25%)", "-83.67€ (-3.91%)", "-1.23€ (-0.67%)", "-10.34€ (-2.98%)", "+9.16€ (4.13%)", "−1085.67€ (-2.75%)"];
     const tabActionsSymbol = ["CAPITALCOM:GOLD|1D|EUR", "BINANCE:ETHUSD|1D|EUR", "NASDAQ:AAPL|1D|EUR", "NASDAQ:MSFT|1D|EUR", "NASDAQ:TSLA|1D|EUR", "CRYPTO:BTCUSD|1D|EUR"]
 
     return (
@@ -44,20 +44,27 @@ export default function App() {
             </header>
             <main>
                 <div className="blocFluxActuel">
-                    <div className="fluxActuel">
-                        <h2>Flux actuel · {tabActionsName[selectedAction]}</h2>
-                    </div>
                     {isWidgetFluxVisible && (
-                        <div className="divWidgetVisible">
-                            <div className="tradingViewWidget">
-                                <TradingViewWidget symbol={tabActionsSymbol[selectedAction]}/>
+                        <div>
+                            <div className="fluxActuel">
+                                <h2>Flux actuel · {tabActionsName[selectedAction]}</h2>
                             </div>
-                            <button className="btnGenererPrediction" onClick={() => genererPrediction()}>Générer une prédiction</button>
+                            <div className="divWidgetVisible">
+                                <div className="tradingViewWidget">
+                                    <TradingViewWidget symbol={tabActionsSymbol[selectedAction]}/>
+                                </div>
+                                <button className="btnGenererPrediction" onClick={() => genererPrediction()}>Générer une prédiction</button>
+                            </div>
                         </div>
                     )}
                     {isTxtFluxVisible && (
-                        <div className="divWidgetInvisible">
-                            <p>Sélectionnez un actif pour le visualiser</p>
+                        <div>
+                            <div className="fluxActuel">
+                                <h2>Flux actuel</h2>
+                            </div>
+                            <div className="divWidgetInvisible">
+                                <p>Sélectionnez un actif pour le visualiser</p>
+                            </div>
                         </div>
                     )}
                 </div>
