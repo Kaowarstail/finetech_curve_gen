@@ -1,0 +1,65 @@
+.blocActions {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    padding: 10px;
+    background-color: #fffffe;
+    border: solid 2px #0e172c;
+    width: 445px;
+    height: 350px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+}
+
+.blocActions > .Actions {
+    background-color: #0e172c;
+    width: 215px;
+    height: 110px;
+    color: #fec7d7;
+    border-radius: 5px;
+}
+
+.blocActions > .selected {
+    background-color: #7fde88;
+    color: #0e172c;
+}
+
+.hautAction {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hautAction .actionName {
+    width: 80%;
+}
+
+.hautAction .actionOptions {
+    width: 15%;
+    margin-left: 5%;
+}
+
+.hautAction > h4 {
+    margin: 10px;
+    margin-bottom: 0px;
+    font-size: 25px;
+}
+
+.milieuAction {
+    text-align: right;
+}
+
+.milieuAction > h4 {
+    margin: 5px 15px 0 0;
+    font-size: 25px;
+}
+
+.basAction {
+    text-align: right;
+}
+
+.basAction > h5 {
+    margin: 5px 20px 10px 0;
+    font-size: 15px;
+}

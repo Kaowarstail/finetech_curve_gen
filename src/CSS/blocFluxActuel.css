@@ -1,0 +1,40 @@
+.blocFluxActuel {
+    padding: 10px;
+    background-color: #fffffe;
+    border: solid 2px #0e172c;
+    width: 900px;
+}
+
+.fluxActuel > h2 {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 100px;
+    left: 45px;
+    background-color: #fffffe;
+    font-size: 30px;
+}
+
+.fluxActuel > h3 {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 105px;
+    left: 210px;
+    background-color: #fffffe;
+    font-size: 25px;
+}
+
+.btnGenererPrediction {
+    padding: 7px;
+    background-color: #0e172c;
+    color: #fffffe;
+    position: absolute;
+    top: 110px;
+    left: 765px;
+    width: 150px;
+    border: none;
+    font-size: 11px;
+    border-radius: 5px;
+    font-weight: 700;
+}

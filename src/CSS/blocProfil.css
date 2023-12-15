@@ -1,0 +1,37 @@
+.blocProfil {
+    position: absolute;
+    top: 464px;
+    right: 20px;
+    padding: 10px;
+    background-color: #fffffe;
+    border: solid 2px #0e172c;
+    width: 445px;
+    height: 280px;
+}
+
+.blocProfil > h2 {
+    margin: 5px;
+    font-size: 30px;
+}
+
+.blocProfil > p {
+    margin: 8px;
+    margin-left: 5px;
+    font-weight: 400;
+}
+
+.deconnexion {
+    text-align: right;
+    margin-right: 5px;
+}
+
+.btnDeconnexion {
+    padding: 7px;
+    background-color: #0e172c;
+    color: #fffffe;
+    width: 150px;
+    border: none;
+    font-size: 11px;
+    border-radius: 5px;
+    font-weight: 700;
+}

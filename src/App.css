@@ -1,3 +1,8 @@
+@import "./CSS/blocFluxActuel.css";
+@import "./CSS/blocActions.css";
+@import "./CSS/blocPrediction.css";
+@import "./CSS/blocProfil.css";
+
 body {
     background-color: #fec7d7;
     margin: 10px;
@@ -25,118 +30,17 @@ header {
 
 .helloUser > h2 {
     margin: 0 auto;
+    font-size: 30px;
 }
 .helloUser > p {
     margin: 0 auto;
+    font-size: 20px;
 }
 
-main {
-
-}
-
-.blocFluxActuel {
-    padding: 10px;
-    background-color: #fffffe;
-    border: solid 2px #0e172c;
-    width: 900px;
-}
-
-.fluxActuel > h2 {
-    margin: 0 auto;
-    margin-bottom: 10px;
-    position: absolute;
-    top: 100px;
-    left: 45px;
-    background-color: #fffffe;
-    font-size: 30px;
-}
-
-.fluxActuel > h3 {
-    margin: 0 auto;
-    margin-bottom: 10px;
-    position: absolute;
-    top: 105px;
-    left: 210px;
-    background-color: #fffffe;
-    font-size: 25px;
-}
-
-.btnGenererPrediction {
-    padding: 7px;
-    background-color: #0e172c;
-    color: #fffffe;
-    position: absolute;
-    top: 110px;
-    left: 765px;
-    width: 150px;
-    border: none;
-    font-size: 11px;
-    border-radius: 5px;
+.bold {
     font-weight: 700;
 }
 
-.blocActions {
-    position: absolute;
-    top: 80px;
-    right: 20px;
-    padding: 10px;
-    background-color: #fffffe;
-    border: solid 2px #0e172c;
-    width: 445px;
-    height: 350px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    gap: 10px;
-}
-
-.blocActions > .Actions {
-    background-color: #0e172c;
-    width: 215px;
-    height: 110px;
-    color: #fffffe;
-}
-
-.blocPrediction {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #fffffe;
-    border: solid 2px #0e172c;
-    width: 900px;
-    height: 280px;
-}
-
-.prediction > h2 {
-    margin: 0 auto;
-    margin-bottom: 10px;
-    position: absolute;
-    top: 480px;
-    left: 45px;
-    background-color: #fffffe;
-    font-size: 30px;
-}
-
-.btnExporterPrediction {
-    padding: 7px;
-    background-color: #0e172c;
-    color: #fffffe;
-    position: absolute;
-    top: 490px;
-    left: 765px;
-    width: 150px;
-    border: none;
-    font-size: 11px;
-    border-radius: 5px;
-    font-weight: 700;
-}
-
-.blocProfil {
-    position: absolute;
-    top: 464px;
-    right: 20px;
-    padding: 10px;
-    background-color: #fffffe;
-    border: solid 2px #0e172c;
-    width: 445px;
-    height: 280px;
+.light {
+    font-weight: 100;
 }

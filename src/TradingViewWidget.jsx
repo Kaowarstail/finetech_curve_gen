@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-function TradingViewWidget() {
+function TradingViewWidget(props) {
     const container = useRef();
 
     useEffect(
@@ -10,11 +10,11 @@ function TradingViewWidget() {
                 script.src = "https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js";
                 script.type = "text/javascript";
                 script.async = true;
-                script.innerHTML = `
+                script.innerHTML = JSON.stringify(
                 {
                   "symbols": [
                     [
-                      "CAPITALCOM:GOLD|1D|EUR"
+                      props.symbol
                     ]
                   ],
                   "chartOnly": false,
@@ -59,7 +59,7 @@ function TradingViewWidget() {
                   "wickUpColor": "rgba(127, 222, 136, 1)",
                   "wickDownColor": "rgba(255, 39, 102, 1)",
                   "dateFormat": "dd/MM/yyyy"
-                }`;
+                });
             container.current.appendChild(script);
             }
 
@@ -72,7 +72,7 @@ function TradingViewWidget() {
                 }
             };
         },
-        []
+        [props.symbol]
     );
 
     return (
