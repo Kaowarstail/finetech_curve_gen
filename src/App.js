@@ -6,9 +6,27 @@ import LogoBlack from './images/Logo_Black.png'
 export default function App() {
 
     const [selectedAction, setSelectedAction] = useState(null);
+    const [isWidgetFluxVisible, setIsWidgetFluxVisible] = useState(false);
+    const [isTxtFluxVisible, setIsTxtFluxVisible] = useState(true);
+    const [isTxtPredictionVisible, setIsTxtPredictionVisible] = useState(true);
+
     const handleDivClick = (actionNumber) => {
         setSelectedAction(actionNumber);
+
+        if (!isWidgetFluxVisible) {
+            setIsWidgetFluxVisible(true);
+        }
+
+        if (isTxtFluxVisible) {
+            setIsTxtFluxVisible(false);
+        }
     };
+
+    const genererPrediction = () => {
+        if (isTxtPredictionVisible) {
+            setIsTxtPredictionVisible(false);
+        }
+    }
 
     const tabActionsName= ["Gold", "Ethereum", "Apple", "Microsoft", "Tesla", "Bitcoin"];
     const tabActionsPrice = ["1857.32€", "1857.32€", "1857.32€", "1857.32€", "1857.32€", "1857.32€"];
@@ -27,12 +45,21 @@ export default function App() {
             <main>
                 <div className="blocFluxActuel">
                     <div className="fluxActuel">
-                        <h2>Flux actuel ·</h2><h3>{tabActionsName[selectedAction]}</h3>
+                        <h2>Flux actuel · {tabActionsName[selectedAction]}</h2>
                     </div>
-                    <div className="tradingViewWidget">
-                        <TradingViewWidget symbol={tabActionsSymbol[selectedAction]}/>
-                    </div>
-                    <button className="btnGenererPrediction">Générer une prédiction</button>
+                    {isWidgetFluxVisible && (
+                        <div className="divWidgetVisible">
+                            <div className="tradingViewWidget">
+                                <TradingViewWidget symbol={tabActionsSymbol[selectedAction]}/>
+                            </div>
+                            <button className="btnGenererPrediction" onClick={() => genererPrediction()}>Générer une prédiction</button>
+                        </div>
+                    )}
+                    {isTxtFluxVisible && (
+                        <div className="divWidgetInvisible">
+                            <p>Sélectionnez un actif pour le visualiser</p>
+                        </div>
+                    )}
                 </div>
                 <div className="blocActions">
                     {[0, 1, 2, 3, 4, 5].map((number) => (
@@ -56,7 +83,16 @@ export default function App() {
                     <div className="prediction">
                         <h2>Prédiction</h2>
                     </div>
-                    <button className="btnExporterPrediction">Exporter la prédiction</button>
+                    {!isTxtPredictionVisible && (
+                        <div>
+                            <button className="btnExporterPrediction">Exporter la prédiction</button>
+                        </div>
+                    )}
+                    {isTxtPredictionVisible && (
+                        <div className="divPredictionInvisible">
+                            <p>Sélectionnez un actif pour générer une prédiciton</p>
+                        </div>
+                    )}
                 </div>
                 <div className="blocProfil">
                     <h2>Mon profil</h2>
