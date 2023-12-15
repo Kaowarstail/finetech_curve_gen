@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import TradingViewWidget from './TradingViewWidget';
 import './App.css';
-import LogoBlack from './images/Logo_Black.png'
+import LogoBlack from './images/Logo_Black.png';
+import Prediction from './images/prediction.png';
 
 export default function App() {
 
@@ -92,6 +93,9 @@ export default function App() {
                     </div>
                     {!isTxtPredictionVisible && (
                         <div>
+                            <div>
+                                <img src={Prediction} className="predictionPNG"/>
+                            </div>
                             <button className="btnExporterPrediction">Exporter la prédiction</button>
                         </div>
                     )}

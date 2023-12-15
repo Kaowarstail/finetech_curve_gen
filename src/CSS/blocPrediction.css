@@ -42,3 +42,9 @@
 .divPredictionInvisible > p {
     font-size: 25px;
 }
+
+.predictionPNG {
+    margin-top: 40px;
+    width: 900px;
+    height: 250px;
+}
