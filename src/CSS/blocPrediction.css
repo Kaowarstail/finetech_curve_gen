@@ -30,3 +30,15 @@
     border-radius: 5px;
     font-weight: 700;
 }
+
+.divPredictionInvisible {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    height: 280px;
+}
+
+.divPredictionInvisible > p {
+    font-size: 25px;
+}
