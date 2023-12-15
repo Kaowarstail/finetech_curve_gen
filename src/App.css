@@ -36,7 +36,7 @@ main {
 
 .blocFluxActuel {
     padding: 10px;
-    background-color: white;
+    background-color: #fffffe;
     border: solid 2px #0e172c;
     width: 900px;
 }
@@ -47,7 +47,7 @@ main {
     position: absolute;
     top: 100px;
     left: 45px;
-    background-color: white;
+    background-color: #fffffe;
     font-size: 30px;
 }
 
@@ -57,14 +57,14 @@ main {
     position: absolute;
     top: 105px;
     left: 210px;
-    background-color: white;
+    background-color: #fffffe;
     font-size: 25px;
 }
 
 .btnGenererPrediction {
     padding: 7px;
     background-color: #0e172c;
-    color: white;
+    color: #fffffe;
     position: absolute;
     top: 110px;
     left: 765px;
@@ -80,16 +80,27 @@ main {
     top: 80px;
     right: 20px;
     padding: 10px;
-    background-color: white;
+    background-color: #fffffe;
     border: solid 2px #0e172c;
     width: 445px;
     height: 350px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+}
+
+.blocActions > .Actions {
+    background-color: #0e172c;
+    width: 215px;
+    height: 110px;
+    color: #fffffe;
 }
 
 .blocPrediction {
     margin-top: 10px;
     padding: 10px;
-    background-color: white;
+    background-color: #fffffe;
     border: solid 2px #0e172c;
     width: 900px;
     height: 280px;
@@ -101,14 +112,14 @@ main {
     position: absolute;
     top: 480px;
     left: 45px;
-    background-color: white;
+    background-color: #fffffe;
     font-size: 30px;
 }
 
 .btnExporterPrediction {
     padding: 7px;
     background-color: #0e172c;
-    color: white;
+    color: #fffffe;
     position: absolute;
     top: 490px;
     left: 765px;
@@ -124,7 +135,7 @@ main {
     top: 464px;
     right: 20px;
     padding: 10px;
-    background-color: white;
+    background-color: #fffffe;
     border: solid 2px #0e172c;
     width: 445px;
     height: 280px;

@@ -23,7 +23,26 @@ export default function App() {
                     </div>
                     <button className="btnGenererPrediction">Générer une prédiction</button>
                 </div>
-                <div className="blocActions"></div>
+                <div className="blocActions">
+                    <div className="Actions Action1">
+                        <h4>Gold</h4>
+                    </div>
+                    <div className="Actions Action2">
+                        <h4>Gold</h4>
+                    </div>
+                    <div className="Actions Action3">
+                        <h4>Gold</h4>
+                    </div>
+                    <div className="Actions Action4">
+                        <h4>Gold</h4>
+                    </div>
+                    <div className="Actions Action5">
+                        <h4>Gold</h4>
+                    </div>
+                    <div className="Actions Action6">
+                        <h4>Gold</h4>
+                    </div>
+                </div>
                 <div className="blocPrediction">
                     <div className="prediction">
                         <h2>Prédiction</h2>

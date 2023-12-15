@@ -40,6 +40,7 @@ function TradingViewWidget() {
                   "maLineWidth": 1,
                   "maLength": 9,
                   "fontColor": "rgba(14, 23, 44, 1)",
+                  "backgroundColor": "rgba(255, 255, 254, 1)",
                   "widgetFontColor": "rgba(14, 23, 44, 1)",
                   "lineType": 0,
                   "dateRanges": [
